@@ -1,3 +1,5 @@
+const autoprefixer = require('autoprefixer')
+const Fiber = require('fibers')
 const path = require('path')
 
 const isPrd = process.NODE_ENV === 'production'
@@ -25,11 +27,28 @@ const config = {
         ]
       },
       {
-        test: /\.(css|scss|less|sass$)/,
+        test: /\.(css|scss$)/,
         use: [
           'style-loader',
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: [autoprefixer()]
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'),
+              fiber: Fiber
+            }
           }
         ]
       }
