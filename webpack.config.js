@@ -1,10 +1,10 @@
-const autoprefixer = require('autoprefixer')
+const autoprefixer = require('autoprefixer');
 // const Fiber = require('fibers')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const path = require('path')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
-const isPrd = process.NODE_ENV === 'production'
+const isPrd = process.NODE_ENV === 'production';
 
 const config = {
   mode: isPrd ? 'production' : 'development',
@@ -81,6 +81,6 @@ const config = {
     filename: 'bundle.js'
   },
   devtool: isPrd ? 'none' : 'inline-cheap-source-map'
-}
+};
 
-module.exports = config
+module.exports = config;
