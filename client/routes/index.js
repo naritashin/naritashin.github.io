@@ -1,4 +1,4 @@
-import Top from 'components/pages/Top'
+import Top from 'components/pages/Top';
 
 export default [
   {
@@ -9,4 +9,4 @@ export default [
     path: '/top',
     component: Top
   }
-]
+];
