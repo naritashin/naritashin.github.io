@@ -24,7 +24,7 @@ export default {
   padding-left: 24px;
   display: flex;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-position-default);
   justify-content: space-between;
 }
 </style>

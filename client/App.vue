@@ -56,7 +56,7 @@ nav {
 }
 
 body {
-  line-height: 1;
+  line-height: 1.2;
 }
 
 ol,
@@ -65,12 +65,14 @@ ul {
 }
 
 :root {
+  --color-background: hsl(0, 0%, 20%);
+  --color-background-content: hsl(60, 25%, 98%);
   --color-brand: hsl(205, 100%, 60%);
   --color-brand-sub: hsl(65, 70%, 50%);
-  --color-background: hsl(0, 0%, 20%);
   --color-text: hsl(0, 0%, 100%);
   --color-text-inverse: hsl(0, 0%, 20%);
   --height-header: 7.2rem;
+  --shadow-position-default: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 html {
