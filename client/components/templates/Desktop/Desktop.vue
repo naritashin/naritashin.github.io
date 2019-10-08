@@ -27,10 +27,13 @@ export default {
 }
 
 .sidemenu-wrap {
+  background-color: var(--color-background-content);
   grid-area: sidemenu;
+  padding: 40px 0 128px;
 }
 
 .main-wrap {
   grid-area: main;
+  padding: 64px 32px 128px;
 }
 </style>
