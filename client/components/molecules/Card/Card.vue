@@ -3,9 +3,7 @@
     <div class="title-wrap">
       <h3 v-text="task.title" class="title" />
       <div class="icon-select">
-        <Icon size="10">
-          <IconSelect />
-        </Icon>
+        <SelectOption />
       </div>
     </div>
     <p v-text="task.description" class="description" />
@@ -13,12 +11,11 @@
 </template>
 
 <script>
-import Icon from 'components/atoms/Icon';
-import IconSelect from 'components/atoms/Icon/icons/IconSelect';
+import SelectOption from './SelectOption';
 
 export default {
   name: 'Card',
-  components: { Icon, IconSelect },
+  components: { SelectOption },
   props: {
     task: {
       type: Object,
@@ -35,7 +32,6 @@ export default {
   border-radius: 8px;
   color: var(--color-text-inverse);
   height: 104px;
-  overflow: hidden;
   padding-block-end: 8px;
   padding-block-start: 8px;
   padding-inline-end: 16px;

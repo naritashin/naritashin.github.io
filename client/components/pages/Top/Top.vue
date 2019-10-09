@@ -2,9 +2,6 @@
   <div class="scene">
     <SceneHeader />
     <Desktop current="top">
-      <template slot="sidemenu">
-        <Sidemenu current="todo" />
-      </template>
       <template slot="main">
         <div class="main">
           <div class="tasklist-wrap">
@@ -51,11 +48,10 @@ import { mapState } from 'vuex';
 import Card from 'components/molecules/Card';
 import Desktop from 'components/templates/Desktop';
 import SceneHeader from 'components/organisms/SceneHeader';
-import Sidemenu from 'components/organisms/Sidemenu';
 
 export default {
   name: 'Top',
-  components: { Card, Desktop, SceneHeader, Sidemenu },
+  components: { Card, Desktop, SceneHeader },
   computed: {
     ...mapState('top', [
       'openTasklist',

@@ -21,7 +21,8 @@ export default {
   top: 0;
   width: 100vw;
   color: var(--color-text-inverse);
-  padding-left: 24px;
+  padding-inline-end: 24px;
+  padding-inline-start: 24px;
   display: flex;
   align-items: center;
   box-shadow: var(--shadow-position-default);

@@ -1,7 +1,7 @@
 <template>
   <div class="desktop">
     <div class="sidemenu-wrap">
-      <slot name="sidemenu" />
+      <Sidemenu />
     </div>
     <div class="main-wrap">
       <slot name="main" />
@@ -10,8 +10,11 @@
 </template>
 
 <script>
+import Sidemenu from 'components/organisms/Sidemenu';
+
 export default {
-  name: 'Desktop'
+  name: 'Desktop',
+  components: { Sidemenu }
 };
 </script>
 
