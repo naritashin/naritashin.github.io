@@ -1,9 +1,6 @@
 <template>
   <header class="header">
-    <span>Your Task Is</span>
-    <nav class="navigation">
-      <router-link v-text="'Top'" class="navigation-link" to="/top" />
-    </nav>
+    <span class="title">Your Task Is</span>
   </header>
 </template>
 
@@ -27,5 +24,9 @@ export default {
   align-items: center;
   box-shadow: var(--shadow-position-default);
   justify-content: space-between;
+}
+
+.title {
+  cursor: default;
 }
 </style>
