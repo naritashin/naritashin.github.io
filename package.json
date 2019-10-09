@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "test",
-    "build": "NODE_ENV=production webpack",
+    "build": "webpack",
     "dev": "webpack-dev-server --hot",
     "lint": "eslint --fix client"
   },
