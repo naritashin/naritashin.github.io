@@ -5,12 +5,13 @@ const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const isPrd = process.NODE_ENV === 'production';
+const outputDir = isPrd ? 'public' : 'dist';
 
 const config = {
   mode: isPrd ? 'production' : 'development',
   entry: path.resolve(__dirname, 'client/index.js'),
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, outputDir),
     filename: 'bundle.js'
   },
   module: {
