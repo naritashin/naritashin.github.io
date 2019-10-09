@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
-const isPrd = process.NODE_ENV === 'production';
+const isPrd = process.env.NODE_ENV === 'production';
 const outputDir = isPrd ? 'public' : 'dist';
 
 const config = {
