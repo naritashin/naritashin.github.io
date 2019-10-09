@@ -22,14 +22,7 @@
 
 <script>
 export default {
-  name: 'Sidemenu',
-  props: {
-    current: {
-      type: String,
-      default: 'todo',
-      required: true
-    }
-  }
+  name: 'Sidemenu'
 };
 </script>
 

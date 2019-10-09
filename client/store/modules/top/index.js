@@ -6,8 +6,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '1',
-      estimatedTime: '72:00',
-      usageTime: '0:00'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 0,
+        minutes: 0
+      }
     },
     {
       id: '0002',
@@ -15,8 +21,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '1',
-      estimatedTime: '72:00',
-      usageTime: '0:00'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 0,
+        minutes: 0
+      }
     },
     {
       id: '0003',
@@ -24,8 +36,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '1',
-      estimatedTime: '72:00',
-      usageTime: '0:00'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 0,
+        minutes: 0
+      }
     },
     {
       id: '0004',
@@ -33,8 +51,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '1',
-      estimatedTime: '72:00',
-      usageTime: '0:00'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 0,
+        minutes: 0
+      }
     }
   ],
   workingTasklist: [
@@ -44,8 +68,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '2',
-      estimatedTime: '72:00',
-      usageTime: '2:15'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 32,
+        minutes: 15
+      }
     },
     {
       id: '0006',
@@ -53,8 +83,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '2',
-      estimatedTime: '72:00',
-      usageTime: '2:15'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 32,
+        minutes: 15
+      }
     },
     {
       id: '0007',
@@ -62,8 +98,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '2',
-      estimatedTime: '72:00',
-      usageTime: '2:15'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 32,
+        minutes: 15
+      }
     },
     {
       id: '0008',
@@ -71,8 +113,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '2',
-      estimatedTime: '72:00',
-      usageTime: '2:15'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 32,
+        minutes: 15
+      }
     }
   ],
   completedTasklist: [
@@ -82,8 +130,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '3',
-      estimatedTime: '72:00',
-      usageTime: '70:30'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 70,
+        minutes: 30
+      }
     },
     {
       id: '0010',
@@ -91,7 +145,10 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '3',
-      estimatedTime: '72:00',
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
       usageTime: '72:30'
     },
     {
@@ -100,7 +157,10 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '3',
-      estimatedTime: '72:00',
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
       usageTime: '72:00'
     },
     {
@@ -109,8 +169,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '3',
-      estimatedTime: '72:00',
-      usageTime: '2:15'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 32,
+        minutes: 15
+      }
     }
   ],
   pendingTasklist: [
@@ -120,8 +186,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '9',
-      estimatedTime: '72:00',
-      usageTime: '2:15'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 32,
+        minutes: 15
+      }
     },
     {
       id: '0014',
@@ -129,8 +201,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '9',
-      estimatedTime: '72:00',
-      usageTime: '2:15'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 32,
+        minutes: 15
+      }
     },
     {
       id: '0015',
@@ -138,8 +216,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '9',
-      estimatedTime: '72:00',
-      usageTime: '2:15'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 32,
+        minutes: 15
+      }
     },
     {
       id: '0016',
@@ -147,8 +231,14 @@ const state = {
       description:
         'test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description,test-data-description',
       status: '9',
-      estimatedTime: '72:00',
-      usageTime: '2:15'
+      estimatedTime: {
+        hours: 72,
+        minutes: 0
+      },
+      usageTime: {
+        hours: 32,
+        minutes: 15
+      }
     }
   ]
 };
