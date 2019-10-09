@@ -5,7 +5,7 @@ const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const isPrd = process.env.NODE_ENV === 'production';
-const outputDir = isPrd ? 'public' : 'dist';
+const outputDir = isPrd ? 'docs' : 'dist';
 
 const config = {
   mode: isPrd ? 'production' : 'development',
