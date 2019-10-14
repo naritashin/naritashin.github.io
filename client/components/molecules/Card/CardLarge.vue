@@ -1,9 +1,14 @@
 <template>
-  <div class="card-large">
+  <div class="card-large" @click.stop="onClickEdit">
     <div class="title-wrap">
       <h3 v-text="task.title" class="title" />
       <div class="icon-select">
-        <SelectOption />
+        <SelectOption
+          @clickEdit="onClickEdit"
+          @clickStatus="onClickStatus"
+          @clickWorkingTime="onClickWorkingTime"
+          @clickDelete="onClickDelete"
+        />
       </div>
     </div>
     <p v-text="task.description" class="description" />
@@ -22,13 +27,8 @@
 </template>
 
 <script>
+import convertHoursIntoMinutes from 'utils/convertHoursIntoMinutes';
 import SelectOption from './SelectOption';
-
-const convertHoursIntoMinutes = ({ minutes = 0, hours = 0 }) => {
-  const minutesOfHours = Math.floor(hours * 60);
-
-  return minutes + minutesOfHours;
-};
 
 export default {
   name: 'Card',
@@ -60,6 +60,18 @@ export default {
     timeOfString ({ hours = 0, minutes = 0 }) {
       const zeroPaddedMinutes = `00${minutes}`.slice(-2);
       return `${hours}:${zeroPaddedMinutes}`;
+    },
+    onClickEdit () {
+      this.$emit('clickEdit', this.task.id);
+    },
+    onClickStatus () {
+      this.$emit('clickStatus', this.task.id);
+    },
+    onClickWorkingTime () {
+      this.$emit('clickWorkingTime', this.task.id);
+    },
+    onClickDelete () {
+      this.$emit('clickDelete', this.task.id);
     }
   }
 };
@@ -70,9 +82,10 @@ export default {
   background-color: var(--color-background-content);
   border-radius: 8px;
   color: var(--color-text-inverse);
-  height: 208px;
+  cursor: pointer;
+  height: 224px;
   padding-block-end: 8px;
-  padding-block-start: 8px;
+  padding-block-start: 16px;
   padding-inline-end: 16px;
   padding-inline-start: 16px;
   text-overflow: ellipsis;

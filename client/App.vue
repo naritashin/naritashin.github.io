@@ -69,6 +69,10 @@ ul {
   --color-background-content: hsl(60, 25%, 98%);
   --color-brand: hsl(205, 100%, 60%);
   --color-brand-sub: hsl(65, 70%, 50%);
+  --color-status-open: hsl(231, 54%, 35%);
+  --color-status-working: hsl(65, 70%, 35%);
+  --color-status-done: hsl(100, 65%, 35%);
+  --color-status-pending: hsl(0, 0%, 55%);
   --color-text: hsl(0, 0%, 100%);
   --color-text-inverse: hsl(0, 0%, 20%);
   --height-header: 7.2rem;

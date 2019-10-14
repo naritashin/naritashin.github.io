@@ -8,7 +8,13 @@
           <div class="tasklist-wrap">
             <ul class="tasklist">
               <li v-for="(data, index) in workingTasklist" :key="index" class="task">
-                <Card :task="data" />
+                <Card
+                  :task="data"
+                  @clickEdit="onClickEdit"
+                  @clickStatus="onClickStatus"
+                  @clickWorkingTime="onClickWorkingTime"
+                  @clickDelete="onClickDelete"
+                />
               </li>
             </ul>
           </div>
@@ -29,12 +35,20 @@ export default {
   name: 'Top',
   components: { Card, Desktop, SceneHeader },
   computed: {
-    ...mapState('top', [
+    ...mapState('tasklist', [
       'openTasklist',
       'workingTasklist',
       'completedTasklist',
       'pendingTasklist'
     ])
+  },
+  methods: {
+    onClickEdit (taskId) {
+      this.$router.push({ name: 'detail', params: { id: taskId } });
+    },
+    onClickStatus () {},
+    onClickWorkingTime () {},
+    onClickDelete () {}
   }
 };
 </script>

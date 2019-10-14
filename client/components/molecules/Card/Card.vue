@@ -1,9 +1,14 @@
 <template>
-  <div class="card">
+  <div class="card" @click.stop="onClickEdit">
     <div class="title-wrap">
       <h3 v-text="task.title" class="title" />
       <div class="icon-select">
-        <SelectOption />
+        <SelectOption
+          @clickEdit="onClickEdit"
+          @clickStatus="onClickStatus"
+          @clickWorkingTime="onClickWorkingTime"
+          @clickDelete="onClickDelete"
+        />
       </div>
     </div>
     <p v-text="task.description" class="description" />
@@ -22,6 +27,20 @@ export default {
       required: true,
       default: () => {}
     }
+  },
+  methods: {
+    onClickEdit () {
+      this.$emit('clickEdit', this.task.id);
+    },
+    onClickStatus () {
+      this.$emit('clickStatus', this.task.id);
+    },
+    onClickWorkingTime () {
+      this.$emit('clickWorkingTime', this.task.id);
+    },
+    onClickDelete () {
+      this.$emit('clickDelete', this.task.id);
+    }
   }
 };
 </script>
@@ -31,9 +50,10 @@ export default {
   background-color: var(--color-background-content);
   border-radius: 8px;
   color: var(--color-text-inverse);
-  height: 104px;
+  cursor: pointer;
+  height: 108px;
   padding-block-end: 8px;
-  padding-block-start: 8px;
+  padding-block-start: 12px;
   padding-inline-end: 16px;
   padding-inline-start: 16px;
   text-overflow: ellipsis;
