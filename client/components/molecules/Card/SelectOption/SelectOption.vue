@@ -1,16 +1,16 @@
 <template>
   <div class="select-option">
-    <span @click="onClickSelectOption">
+    <span @click.stop="onClickSelectOption">
       <Icon size="10">
         <IconSelect />
       </Icon>
     </span>
     <template v-if="isShownOptions">
       <div class="options-wrap">
-        <div class="option">Edit</div>
-        <div class="option">Status</div>
-        <div class="option">Working time</div>
-        <div class="option caution">Delete</div>
+        <div class="option" @click="$emit('clickEdit')">Edit</div>
+        <div class="option" @click="$emit('clickStatus')">Status</div>
+        <div class="option" @click="$emit('clickWorkingTime')">Working time</div>
+        <div class="option caution" @click="$emit('clickDelete')">Delete</div>
       </div>
       <div class="disp-lock" @click.stop="onCloseOptions" />
     </template>
